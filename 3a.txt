@@ -1,0 +1,76 @@
+1. Download and extract the Natural Earth Quick Start Kit data. Open QGIS. Click on File ‣
+Open Project.
+2. Browse to the directory when we had extracted the natural earth data. We should see a
+file named Natural_Earth_quick_start_for_QGIS.qgs. This is the project file that contains
+styled layers in QGIS Document format. Click Open.
+3.If name of places are not deplayed just open property window of ne_10m_populated_places
+layer and under Labels tab check the checkbox of Label this layer with and from the dropdown
+list select Name.
+4. In this tutorial, we will make a map of Japan. Click the Zoom In button and draw a
+rectangle around Japan to zoom to the area.
+5.We can turn off some map layers for data that we do not need for this map. Un-check
+the box next to 10m_geography_marine_polys and 10m_admin_0_map_units layers.we will use UTM Zone 54N.
+Click the CRS Status button at the bottom-right of the QGIS window or click on Project
+Project Properties....
+6. Check the Enable on-the-fly CRS Transformation box. Type Tokyo utm zone54n in
+the Filter search box. Once we see the results, select Tokyo / UTM Zone 54N -
+EPSG:3095. Click Apply.
+7. Now we can start to assemble our map. Go to Project ‣ New Print Composer.
+8. We will be prompted to enter a title for the composer. You can leave it empty and
+click Ok.
+10. In the Print Composer window, click on Zoom full to display the full extent of the Layout.
+Now we would have to bring the map view that we see in the QGIS Canvas to the
+composer. Go to Layout ‣ Add Map.
+11. Once the Add Map button is active, hold the left mouse button and drag a rectangle
+where we want to insert the map.
+12.Select Layout ‣ Move item content to pan the map in the window and center it in the
+composer.
+13. Let us adjust the zoom level for the given map. Click on the Item Properties tab and
+enter 7000000 for Scale value.
+14. Now we will add a map inset that shows a zoomed in view for the Tokyo area. Before we
+make any changes to the layers in the main QGIS window, check the Lock layers for map
+item and Lock layer styles for map item boxes. This will ensure that if we turn off some
+layers or change their styles, this view will not change.
+15. Switch to the main QGIS window. Use the Zoom In button to zoom to the area around
+Tokyo.
+16. We are now ready to add the map inset. Switch the Print Composer window. Go
+to Layout ‣ Add Map.
+18. Drag a rectangle at the place where we want to add the map inset. We will now notice
+that we have 2 map objects in the Print Composer. When making changes, make sure
+we have the correct map selected. Select the Map 1 object that we just added from
+the Items panel. Select the Item properties tab. Scroll down to the Frame panel and
+check the box next to it. We can change the color and thickness of the frame border so
+it is easy to distinguish against the map background.
+19.Select the Map 0 object from the Items panel. In the Item properties tab, scroll down to the Overviews section. Click
+the Add a new overview button.
+20. Select Map 1 as the Map Frame. What this is telling the Print Composer is that it must
+highlight our current object Map 0 with the extent of the map shown in
+the Map 1 object.
+21. Now that we have the map inset ready, we will add a grid and zebra border to the main
+map. Select the Map 0 object from the Items panel. In the Item properties tab scroll
+down to the Grids section. Click the Add a new grid button.
+22. By default the grid lines use the same units and projections as the currently selected
+map projections. However it is more common and useful to display grid lines in
+degrees. We can select a different CRS for the grid. Click on the change... button next
+to CRS.
+23. In the Coordinate Reference System Selector dialog enter 4326 in the Filter box. From
+the results select the WGS84 EPSG:4326 as the CRS. Click OK.
+24. Select the Interval values as 5 degrees in both X and Y direction. We can adjust
+the Offset to change where the grid lines appear.
+25. Scroll down to the Grid frame section and select a frame style that suits our map. Also
+check the Draw coordinates box.
+26. Adjust the Distance to map frame till the coordinates are legible. Change the Coordinate
+precision to 2 so the coordinates are displayed only up to the two decimal.
+27. Now we will add a North Arrow to the map. The Print Composer comes with a nice
+collection of map-related images - including many types of North Arrows. Click Layout ‣
+Add Image.
+28. Holding left mouse button draw a rectangle on the top-right corner of the map canvas.
+On the right-hand panel click on the Item Properties tab and expand the Search
+directories section and select any North Arrow image.
+29. Now we will add a scale bar. Click on Layout ‣ Add Scalebar.
+30. Click on the layout where we want the scalebar to appear. In the Item Properties tab
+make sure we have chosen the correct map element for which to display the scalebar
+Choose the Style that fit our requirement. In the Segments panel we can adjust the
+number of segments and their size.
+
+31. It is time to label our map. Click on Layout ‣ Add Label.
